@@ -1,7 +1,7 @@
 
 # License
 
-[![Hippocratic License HL3-BDS-CL-ECO-EXTR-MEDIA-MIL-SV-XUAR](https://img.shields.io/static/v1?label=Hippocratic%20License&message=HL3-BDS-CL-ECO-EXTR-MEDIA-MIL-SV-XUAR&labelColor=5e2751&color=bc8c3d){#fig_Exclude}](https://firstdonoharm.dev/version/3/0/bds-cl-eco-extr-media-mil-sv-xuar.html)
+[![Hippocratic License HL3-BDS-CL-ECO-EXTR-MEDIA-MIL-SV-XUAR](https://img.shields.io/static/v1?label=Hippocratic%20License&message=HL3-BDS-CL-ECO-EXTR-MEDIA-MIL-SV-XUAR&labelColor=5e2751&color=bc8c3d)](https://firstdonoharm.dev/version/3/0/bds-cl-eco-extr-media-mil-sv-xuar.html)
 
 ## License in short
 You are free to use the content of this webpage for whatever you like, including modification, sale, distribution, and more. However, please note that there are some important restrictions: You can do whatever you like with this content as long as it is halal or morally supportable. If you are unsure about a topic, please consult the license agreement.
@@ -144,14 +144,6 @@ _This section identifies additional individuals or entities that a Licensee coul
 [8.8.](#8.8) _Entire License_: This is the entire License between the Licensor and Licensee with respect to the claims released herein and that the consideration stated herein is the only consideration or compensation to be paid or exchanged between them for this License. This License cannot be modified or amended except in a writing signed by Licensor and Licensee.
 
 [8.9.](#8.9) _Successors and Assigns_: This License shall be binding upon and inure to the benefit of the Licensor’s and Licensee’s respective heirs, successors, and assigns.
-:::
 
-:::{.callout-tip collapse='true'}
-### Some background
-This project initially intended to use the library [animate.css](https://github.com/animate-css/animate.css). However, it turned out that there was no need for it in this web thesis, so it is not used. Nevertheless, after reading their license on [Github](https://raw.githubusercontent.com/animate-css/animate.css/main/LICENSE), I found the content very compelling.
-
-Thus, I want to thank [animate.css](https://github.com/animate-css/animate.css). Through their project, I came to know about the very appealing Hippocratic License. Let me give you some examples of why this license agreement is awesome: the[BDS](https://bdsmovement.net/) movement works to raise awareness of and combat the oppression conducted by Israel's government. They aim to stop international support for Israel's mistreatment of Palestinians and pressure Israel to comply with international law. Up until that point, I didn't know that one could incorporate such beautiful justice into a license agreement, and I was pleasantly surprised to discover that there has already been significant work done in this area.
-
-Additionally, I found great joy in reading some of the articles of the [Universal Declaration of Human Rights](https://www.un.org/en/about-us/universal-declaration-of-human-rights). I am deeply grateful to have read such familiar articles and witnessed efforts to spread justice across the globe. When I say familiar articles, I mean, they have reminded me of my Quran.
 
 

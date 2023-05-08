@@ -1,10 +1,6 @@
 ---
-title: Master Thesis
+title: Master Thesis: Flow predictions using control-oriented cluster-based network modeling
 emoji: 📚
-colorFrom: green
-colorTo: gray
-sdk: static
-pinned: false
 ---
 
 # Overview
