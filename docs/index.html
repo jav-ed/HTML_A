@@ -646,6 +646,10 @@ function hide_Riksha() {
 window.addEventListener("load", function() {
     console.log("whole page has loaded");
 
+    // correct date
+    para_Date = document.querySelector(".date");
+    para_Date.textContent += " - Shawwal 17, 1444";
+
     // create and insert iframe
     const content = document.getElementById("iframe_Tornado");
     const iframe = createIframe();
