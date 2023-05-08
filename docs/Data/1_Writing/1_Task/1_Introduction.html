@@ -30,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../Data/1_Writing/1_Task/2_0_Motivation.html" rel="next">
 <link href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -197,24 +196,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../Data/1_Writing/1_Task/2_0_Motivation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Motivation</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../Data/1_Writing/1_Task/2_State_Of_Art.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">State of the art</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../Data/1_Writing/1_Task/3_CNM.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cluster-based Network Modeling (CNM)</span></span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -368,11 +349,11 @@ run_Pop(popcorn);
 
 </header>
 
-<p>In this work, a tool called <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling (CNMc)</a> is further developed. The overall goal, in very brief terms, is to generate a model, which is able to predict the trajectories of general dynamical systems. The model shall be capable of predicting the trajectories when a model parameter value is changed. Some basics about dynamical systems are covered in subsection <a href="2_State_Of_Art.html#sec-subsec_1_1_1_Principles"><span>3.0.1</span></a> and in-depth explanations about <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> are given in chapter <span class="quarto-unresolved-ref">?sec-chap_2_Methodology</span>. </p>
+<p>In this work, a tool called <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling (CNMc)</a> is further developed. The overall goal, in very brief terms, is to generate a model, which is able to predict the trajectories of general dynamical systems. The model shall be capable of predicting the trajectories when a model parameter value is changed. Some basics about dynamical systems are covered in subsection <span class="quarto-unresolved-ref">?sec-subsec_1_1_1_Principles</span> and in-depth explanations about <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> are given in chapter <span class="quarto-unresolved-ref">?sec-chap_2_Methodology</span>. </p>
 <p>However, for a short and broad introduction to <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> the workflow depicted in figure <a href="#fig-fig_1_CNMC_Workflow"><span>1.1</span></a> shall be highlighted. The input it receives is data of a dynamical system or space state vectors for a range of model parameter values. The two main important outcomes are some accuracy measurements and the predicted trajectory for each desired model parameter value. Any inexperienced user may only have a look at the predicted trajectories to quickly decide visually whether the prediction matches the trained data. Since <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> is written in a modular manner, meaning it can be regarded as a black-box function, it can easily be integrated into other existing codes or workflows. </p>
 <div id="fig-fig_1_CNMC_Workflow" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/1_Task/1_CNMc_1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Broad overview: Workflow of "><img src="../../3_Figs_Pyth/1_Task/1_CNMc_1.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/1_Task/1_CNMc_1.svg" class="lightbox" title="Broad overview: Workflow of " data-gallery="quarto-lightbox-gallery-1"><img src="../../3_Figs_Pyth/1_Task/1_CNMc_1.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;1.1— Broad overview: Workflow of </figcaption>
 </figure>
 </div>
@@ -735,13 +716,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../Data/1_Writing/1_Task/2_0_Motivation.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Motivation</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"descPosition":"right","closeEffect":"zoom"});</script>
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../Data/8_Add_2_Master/2_About_Author.html">About author</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../Data/10_Law/2_Used_Hippocratic.html">License</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://discord.gg/EEsXp39DaA">Share thoughts</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"openEffect":"zoom","closeEffect":"zoom","descPosition":"right"});</script>
 
 
 
