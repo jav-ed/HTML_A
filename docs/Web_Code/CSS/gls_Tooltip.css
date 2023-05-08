@@ -1,0 +1,104 @@
+/* @import url(http://fonts.googleapis.com/css?family=Kalam); */
+
+.gls {
+	/* An inline element does not start on a new line and only takes up as much width as necessary to display its content. */
+	display: inline;
+
+	/* stack order with z and is only possible for some postions: relative, fixed or sticky.  */
+	position: relative;
+
+	/* appear above other elements with a lover z stack value */
+	z-index: 999;
+
+	/* depends on dark and light theme */
+	/* color: rgb(255, 253, 250);  */
+
+	/* remove the underline */
+	text-decoration: none;
+}
+
+/* the board which pops up - hover */
+.gls_Content {
+	position: absolute;
+
+	/* define background image  */
+	background: url(../../Data/5_Icons/blackboard.svg) no-repeat center bottom;
+	background-size: 100% 100%;
+
+	/* stack order */
+	z-index: 9999;
+
+	/* text width and also placement of the board */
+	width: 280px;
+	height: 200px;
+
+	bottom: 50%;
+	left: 50%;
+	margin-left: -100px;
+	padding: 50px 30px;
+	text-align: center;
+
+	/* text color, does NOT depend on the theme */
+	/* var defined in css_0.css */
+	color: var(--shiny_White);
+
+	opacity: 0;
+	cursor: pointer;
+
+	/* font-size: 0.55em; */
+	/* line-height: 1.4; */
+	/* font-family: 'Kalam', cursive; */
+
+	pointer-events: none;
+
+
+	-webkit-transform: scale3d(0.1,0.2,1);
+	transform: scale3d(0.1,0.2,1);
+	-webkit-transform-origin: 50% 120%;
+	transform-origin: 50% 120%;
+
+	-webkit-transition: opacity 0.4s, -webkit-transform 0.3s;
+	transition: opacity 0.4s, transform 0.3s;
+
+	-webkit-transition-timing-function: ease, cubic-bezier(0.6,0,0.4,1);
+	transition-timing-function: ease, cubic-bezier(0.6,0,0.4,1);
+}
+
+/* propperties when the hover is active */
+.gls:hover .gls_Content {
+	opacity: 1;
+	pointer-events: auto;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+
+	/* size of the writing */
+	font-size: 14px;
+
+	/* padding of the font */
+	padding-top: 70px;
+
+	/* width of the font inside the board */
+	width: 180px;
+
+	text-align: left;
+
+}
+
+/* the board which pops up - hover */
+/* pseudo element, .a:hover is psedo class */
+/* this is the arrow point up to the board */
+.gls_Content::after {
+
+	/* pseduo elements require a content */
+	content: '';
+	position: absolute;
+    top: 74%;
+	left: 39%;
+    width: 20%;
+    height: 20%;
+	z-index: 999;
+	
+    /* background-image: url(../../_static/imgs/shape2.svg) */
+    background: url(../../Data/5_Icons/blackboard.svg) no-repeat center bottom;
+
+}
