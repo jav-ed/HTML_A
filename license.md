@@ -10,7 +10,7 @@ First, you are not allowed to insult, target minorities or religious groups, sup
 Second, there is a copyleft - it basically means, your work is mandated to have the same license, i.e., you as well want to make sure that your work cannot be misused.
 
 
-## Hippocratic license
+## Hippocratic license in detail
 **HIPPOCRATIC LICENSE**
 
 **Version 3.0, October 2021**
