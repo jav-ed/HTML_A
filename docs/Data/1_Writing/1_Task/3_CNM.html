@@ -263,28 +263,19 @@ console.log("Right Nav script is found and activated");
 <!-- Production version -->
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <!-- load external javascript-code -->
-<!--these loads is required since the path from where the access to the scripts happens varies-->
 <script src="../../../Web_Code/Js/lotti_Sidebar_Anim.js"></script>
-<script src="../../../Web_Code/Js/popper_Tooltip_General.js></script>
-
+<script src="../../../Web_Code/Js/popper_Tooltip_General.js"></script>
 <!-- documentation: https://docs.lottiefiles.com/dotlottie-player/ -->
-<script src=&quot;https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js&quot;></script>
-
-<dotlottie-player
-id=&quot;lotti_Anim_Each_Page&quot;
-mode=&quot;normal&quot;
-style=&quot;max-height:15rem&quot;
-background=&quot;transparent&quot;
-speed=&quot;1&quot;
->
-</dotlottie-player>
-
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+<p><dotlottie-player id="lotti_Anim_Each_Page" mode="normal" style="max-height:15rem" background="transparent" speed="1"> </dotlottie-player></p>
 <script>
 // get acceess to the right sidebar
-const quartoMarginSidebar = document.getElementById(&quot;quarto-margin-sidebar&quot;);
+const quartoMarginSidebar = document.getElementById("quarto-margin-sidebar");
 
 // generate a place where the lotti animation shall be placed
-const player = document.getElementById(" lotti_anim_each_page');="" take="" it="" from="" the="" previous="" position="" an="" move="" to="" new="" posistion="" --=""> removed prom previous DOM pos
+const player = document.getElementById('lotti_Anim_Each_Page');
+
+// take it from the previous position an move it to the new posistion --> removed prom previous DOM pos
 quartoMarginSidebar.insertBefore(player, quartoMarginSidebar.firstChild);
 
 
@@ -873,7 +864,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","descPosition":"right","closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"right","openEffect":"zoom","loop":true});</script>
 
 
 
