@@ -1,0 +1,78 @@
+
+<!-- https://www.manypixels.co/free-icons  for board-->
+<!-- https://ionic.io/ionicons/ for star and moon-->
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500"
+    class="illustration">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #113e91;
+            }
+
+            .cls-2 {
+                fill: #000000;
+            }
+
+            .cls-3 {
+                fill: #499625;
+            }
+
+            .cls-4 {
+                fill: #499625;
+            }
+            }
+
+            .cls-6 {
+                fill: #63e716;
+            }
+
+            .cls-7 {
+                fill: #113e91;
+            }
+
+            .cls-8 {
+                fill: #113e91;
+            }
+
+            .cls-9 {
+                fill: #ffffff;
+            }
+        </style>
+    </defs>
+
+    <polygon class="cls-1"
+        points="166.4 154.09 160.2 146.25 250.37 74.92 340.16 146.25 333.94 154.09 250.35 87.68 166.4 154.09"></polygon>
+
+    <rect class="cls-2" x="44.52" y="140.59" width="414.34" height="283.45"></rect>
+
+    <rect class="cls-3" x="60.38" y="154.79" width="379.29" height="254.31"></rect>
+
+    <rect class="cls-4" x="60.38" y="155.04" width="358.58" height="227.09"></rect>
+
+    <rect class="cls-6" x="35.32" y="401.56" width="431.7" height="30.88"></rect> -->
+
+    <circle class="cls-7" cx="250" cy="82.2" r="13.32"></circle>
+
+    <!-- eraser     --> 
+    <g> transform="scale(0.6) translate(400,270)" <path class="cls-8"
+        d="M249.92,68.88a13.32,13.32,0,0,1-6.77,24.74,13.32,13.32,0,1,0,6.77-24.74Z">
+        </path>
+        <rect class="cls-8" x="351.97" y="380.38" width="76.31" height="21.18"></rect>
+
+        <path class="cls-9"
+            d="M363.75,369.37h52.75a7,7,0,0,1,7,7v4a0,0,0,0,1,0,0h-66.7a0,0,0,0,1,0,0v-4A7,7,0,0,1,363.75,369.37Z">
+        </path>
+
+    </g>
+
+    <!-- Moon -->
+    <path transform="scale(0.1) translate(3650,1800)"
+        d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z"
+        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+
+    <!-- star -->
+    <path transform="scale(0.04) translate(9800,4500)"
+        d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor"
+        stroke-linejoin="round" stroke-width="32" />
+</svg>

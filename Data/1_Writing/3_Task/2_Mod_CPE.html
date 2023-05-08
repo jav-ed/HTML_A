@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Flow predictions using control-oriented cluster-based network modeling - 13&nbsp; CPE modeling results</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../Data/1_Writing/3_Task/3_SVD_NMF.html" rel="next">
+<link href="../../../Data/1_Writing/3_Task/1_Track_Results.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../../Web_Code/CSS/css_0.css">
+<link rel="stylesheet" href="../../../Web_Code/CSS/gls_Tooltip.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Data/1_Writing/3_Task/0_Results.html">Results</a></li><li class="breadcrumb-item"><a href="../../../Data/1_Writing/3_Task/2_Mod_CPE.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">CPE modeling results</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../../index.html" class="sidebar-logo-link">
+      <img src="../../../Data/6_Html_Data/1_Logo_Img/1_Tornado.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../">Javed Arshad Butt - Master Thesis</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+              <i class="bi bi-bi-facebook pe-1"></i>
+            Facebook
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cover</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Good Manners</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/0_Deco/2_Thanks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/0_Deco/1_Erkl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Declaration of independent authorship</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/0_Deco/2_0_Task_Def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Task defintion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/0_Deco/2_1_Abstract.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abstract</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abbreviations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/1_Task/1_Introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/1_Task/2_0_Motivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Motivation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/1_Task/2_State_Of_Art.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">State of the art</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/1_Task/3_CNM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cluster-based Network Modeling (CNM)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Methodology</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/2_Task/0_Methodlogy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Methodology</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/2_Task/1_0_CNMC_Data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">CNMc’s data and workflow</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/2_Task/1_Data_Gen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data generation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/2_Task/2_Clustering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Clustering</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/2_Task/3_Tracking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tracking</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/2_Task/6_Modeling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Modeling</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Results</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/3_Task/0_Results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/3_Task/1_Track_Results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tracking results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/3_Task/2_Mod_CPE.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">CPE modeling results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/3_Task/3_SVD_NMF.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Transition properties modeling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/3_Task/4_SVD_Regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Transition property regression models</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/3_Task/5_Pred.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">CNMc predictions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">Conclusion &amp; Outlook</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/4_Task/1_Concl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Conclusion and outlook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/4_Task/2_Zusammen_Deutsch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Zusammenfassung auf Deutsch</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/5_Additional/10_References.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">References</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">Additionals 2 Thesis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/8_Add_2_Master/0_Add_2_Mast.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Modification to the original thesis and source code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/8_Add_2_Master/1_Master_Orig.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Original PDF master thesis</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+ <span class="menu-text">About Author</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/8_Add_2_Master/2_About_Author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">About the author</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/8_Add_2_Master/3_CV.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">CV/Resume</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+ <span class="menu-text">License</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/10_Law/0_Mentioning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Mentioning</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/10_Law/1_Copy_Licenses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Copy of licenses</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/10_Law/2_Used_Hippocratic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Released under license</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/5_Additional/0_Appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Further implemented dynamical systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Data/1_Writing/5_Additional/1_Appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Some basics about chaotic systems</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <div class="quarto-margin-footer"><div class="margin-footer-item">
+<script>
+console.log("Right Nav script is found and activated");
+</script>
+<div id="popper_Tooltip_Gen">
+<pre><code>Feel free to share your thoughts</code></pre>
+<div id="pop_Arrow_Gen" data-popper-arrow="">
+
+</div>
+</div>
+<!-- Production version -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<!-- load external javascript-code -->
+<!--these loads is required since the path from where the access to the scripts happens varies-->
+<script src="../../../Web_Code/Js/lotti_Sidebar_Anim.js"></script>
+<script>
+const script = document.createElement('script');
+script.src = '/Web_Code/Js/popper_Tooltip_General.js';
+document.head.appendChild(script);
+</script>
+<!-- documentation: https://docs.lottiefiles.com/dotlottie-player/ -->
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+<p><dotlottie-player id="lotti_Anim_Each_Page" mode="normal" style="max-height:15rem" background="transparent" speed="1"> </dotlottie-player></p>
+<script>
+// get acceess to the right sidebar
+const quartoMarginSidebar = document.getElementById("quarto-margin-sidebar");
+
+// generate a place where the lotti animation shall be placed
+const player = document.getElementById('lotti_Anim_Each_Page');
+
+// take it from the previous position an move it to the new posistion --> removed prom previous DOM pos
+quartoMarginSidebar.insertBefore(player, quartoMarginSidebar.firstChild);
+
+
+/* --------------------------- get Feedback <p><a> -------------------------- */
+// Create a new <p> element
+const button_Elem = document.createElement('button');
+
+// Create a new <a> element
+const aElement = document.createElement('a');
+
+// Set the href attribute of the <a> element
+aElement.href = 'https://discord.gg/EEsXp39DaA';
+aElement.id = 'feedback_A';
+button_Elem.id = 'feedback_Button';
+
+// button_Elem.setAttribute("aria-describedby","popper_Tooltip_Gen");
+// aElement.setAttribute("aria-describedby","popper_Tooltip_Gen");
+
+// Set the text content of the <a> element
+const linkText = document.createElement('span');
+linkText.textContent = 'Share your thoughts';
+
+// Create a new SVG element
+const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+svgElement.setAttribute('viewBox', '0 0 512 512'); // set the viewBox attribute to define the SVG size
+svgElement.setAttribute('class', 'ionicon'); // set the class attribute to apply any CSS styles
+svgElement.setAttribute('width', '2rem'); // set the width attribute to scale the SVG
+svgElement.setAttribute('height', '2rem'); // set the height attribute to scale the SVG
+
+// Set the content of the SVG element to the contents of the SVG file
+svgElement.innerHTML = `<!-- see https://ionic.io/ionicons/
+see <ion-icon name="chatbox-ellipses-outline"></ion-icon> -->
+<path d="M408 64H104a56.16 56.16 0 00-56 56v192a56.16 56.16 0 0056 56h40v80l93.72-78.14a8 8 0 015.13-1.86H408a56.16 56.16 0 0056-56V120a56.16 56.16 0 00-56-56z" fill="none" stroke="#ecff7f" stroke-linejoin="round" stroke-width="32" />
+<circle cx="160" cy="216" r="32" fill="#ecff7f" />
+<circle cx="256" cy="216" r="32" fill="#ecff7f" />
+<circle cx="352" cy="216" r="32" fill="#ecff7f" />`;
+
+
+// Append the SVG element to the <a> element
+aElement.appendChild(linkText);
+aElement.appendChild(svgElement);
+
+// Append the <a> element to the <p> element
+button_Elem.appendChild(aElement);
+quartoMarginSidebar.insertBefore(button_Elem, player.nextSibling);
+
+// see: https://lottiefiles.com/129292-aeroplane-flying?lang=de
+player.load('https://assets3.lottiefiles.com/packages/lf20_FsI2nYFYMo.json');
+player.loop = false;
+
+var second_Anim = false;
+
+// Add event listener for click event
+player.addEventListener('click', () => {
+    player.play();
+    complete_Check(second_Anim);
+
+});
+
+
+const popcorn = document.querySelector('#feedback_Button');
+const tooltip = document.querySelector('#popper_Tooltip_Gen');
+
+const popperInstance = Popper.createPopper(popcorn, tooltip, {
+placement: 'top',
+modifiers: [
+    {
+        name: 'offset',
+    options: {
+        offset: [0, 8],
+    },
+    },
+],
+});
+
+
+// function onScriptLoad(popcorn) {
+// if (typeof run_Pop === 'function') {
+//     run_Pop(popcorn);
+// }
+// }
+
+// document.addEventListener('readystatechange', (event) => {
+// if (event.target.readyState === 'complete') {
+//     onScriptLoad(popcorn);
+// }
+// });
+
+// // If the script is already loaded before the readystatechange event, call the function directly
+// if (document.readyState === 'complete') {
+// onScriptLoad(popcorn);
+// }
+
+
+run_Pop(popcorn);
+
+</script>
+</div></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-sec_3_2_MOD_CPE" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">CPE modeling results</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>In this section, results to the <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cpevol" id="cpevolgls" class="gls">CPE<span class="gls_Content"><b>C</b>entroid <b>P</b>osition <b>E</b>volution</span></a> modeling explained in subsection <a href="../2_Task/6_Modeling.html#sec-subsec_2_4_1_CPE"><span>10.0.1</span></a>, shall be presented and assessed . First, a selection of equations, which defines the <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cpevol" id="cpevolgls" class="gls">CPE<span class="gls_Content"><b>C</b>entroid <b>P</b>osition <b>E</b>volution</span></a> are given for one model configuration. Next, representative plots of the <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cpevol" id="cpevolgls" class="gls">CPE<span class="gls_Content"><b>C</b>entroid <b>P</b>osition <b>E</b>volution</span></a> for different models are analyzed. Finally, the predicted centroid position is compared with the actual clustered centroid position.</p>
+<p>Modeling the <em>CPE</em> returns, among other results, analytical equations. These equations describe the behavior of the centroid positions across the range <span class="math inline">\(\vec{\beta}\)</span> and can also be used for making predictions for <span class="math inline">\(\vec{\beta}_{unseen}\)</span>. The model configuration for which they are be presented is <em>SLS</em>, i.e.&nbsp;Lorenz system <a href="../2_Task/1_Data_Gen.html#eq-eq_6_Lorenz"><span>7.1</span></a>, <span class="math inline">\(K= 10,\, \vec{\beta }_{tr} = [\, \beta_0 = 28 ; \, \beta_{end} =33 \,], \, n_{\beta, tr} = 7\)</span>. The analytical <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cpevol" id="cpevolgls" class="gls">CPE<span class="gls_Content"><b>C</b>entroid <b>P</b>osition <b>E</b>volution</span></a> expressions are listed in <a href="#eq-eq_27"><span>13.1</span></a> to <a href="#eq-eq_29"><span>13.3</span></a> for the centroids <span class="math inline">\([\,1,\, 2,\,7\,]\)</span>, respectively. Recalling that the behavior across the 3 different axes (x, y, z) can vary greatly, each axis has its own regression model <span class="math inline">\((\tilde x,\, \tilde y,\, \tilde z)\)</span>. Thus, for each label, 3 different analytical expressions are provided. </p>
+<!-- Minpages here -->
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><span id="eq-eq_27"><span class="math display">\[
+\begin{equation}
+    \begin{aligned}
+        \tilde x &amp;= -0.1661 \, cos(3  \, \beta) \\
+        \tilde y &amp;=  -0.1375 \, cos(3 \,  \beta) \\
+        \tilde z &amp;=  0.8326 \, \beta
+    \end{aligned}
+\end{equation} \tag{13.1}\]</span></span></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="fig-fig_45" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="../../3_Figs_Pyth/3_Task/2_Mod_CPE/1_lb_1.svg" class="lightbox" title="SLS, CPE model for centroid: 1" data-gallery="quarto-lightbox-gallery-1"><img src="../../3_Figs_Pyth/3_Task/2_Mod_CPE/1_lb_1.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;13.1— <em>SLS</em>, <em>CPE</em> model for centroid: 1</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><span id="eq-eq_28"><span class="math display">\[
+\begin{equation}
+    \begin{aligned}
+    \tilde x &amp;= 0.1543 \, sin(3 \, \beta) + 0.2446 \, cos(3 \, \beta) \\
+    \tilde y &amp;= 0.2638 \, sin(3 \, \beta) + 0.4225 \, cos(3 \, \beta) \\
+    \tilde z &amp;= 0.4877 \, \beta
+\end{aligned}
+\label{eq_28}
+\end{equation} \tag{13.2}\]</span></span></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="fig-fig_46" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="../../3_Figs_Pyth/3_Task/2_Mod_CPE/2_lb_2.svg" class="lightbox" title="SLS, CPE model for centroid: 2" data-gallery="quarto-lightbox-gallery-2"><img src="../../3_Figs_Pyth/3_Task/2_Mod_CPE/2_lb_2.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;13.2— <em>SLS</em>, <em>CPE</em> model for centroid: 2</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><span id="eq-eq_29"><span class="math display">\[
+      \begin{equation}
+        \begin{aligned}
+            \tilde x &amp;= -0.1866 \, \beta + 0.133 \, sin(3 \, \beta) \\
+            &amp; \quad + 0.1411 \, cos(3 \, \beta) \\
+            \tilde y &amp;= -0.3 \, \beta \\
+            \tilde z &amp;= -1.0483+ 0.6358 \,\beta
+        \end{aligned}
+        \label{eq_29}
+      \end{equation}  \tag{13.3}\]</span></span></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="fig-fig_47" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="../../3_Figs_Pyth/3_Task/2_Mod_CPE/3_lb_7.svg" class="lightbox" title="SLS, CPE model for centroid: 7" data-gallery="quarto-lightbox-gallery-3"><img src="../../3_Figs_Pyth/3_Task/2_Mod_CPE/3_lb_7.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;13.3— <em>SLS</em>, <em>CPE</em> model for centroid: 7</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Right to the equations the corresponding plots are depicted in figures <a href="#fig-fig_45"><span>13.1</span></a> to <a href="#fig-fig_47"><span>13.3</span></a> . Here, the blue and green curves indicate true and modeled CPE, respectively. Each of the figures supports the choice of allowing each axis to be modeled separately. The z-axis appears to undergo less alteration or to be more linear than the x- and y-axis. If a model is supposed to be valid for all 3 axes, a more complex model, i.e., a higher of terms, is required. Although more flexible models fit training data increasingly better, they tend to overfit. In other words, complex models capture the trained data well but could exhibit oscillations for <span class="math inline">\(\vec{\beta}_{unseen}\)</span>. The latter is even more severe when the model is employed for extrapolation. The difference between interpolation and extrapolation is that for extrapolation the prediction is made with <span class="math inline">\(\beta_{unseen}\)</span> which are not in the range of the trained <span class="math inline">\(\vec{\beta}_{tr}\)</span>. Therefore, less complexity is preferred.</p>
+<p>Next, the performance of predicting the centroid for <span class="math inline">\(\vec{\beta}_{unseen}\)</span> is elaborated. For this purpose, figures <a href="#fig-fig_48"><span>13.4</span></a> to <a href="#fig-fig_52"><span>13.7</span></a> shall be examined. All figures depict the original centroid positions, which are obtained through the clustering step in green and the predicted centroid positions in blue. On closer inspection, orange lines connecting the true and predicted centroid positions can be identified. Note, that they will only be visible if the deviation between the true and predicted state is high enough. Figures <a href="#fig-fig_48_0"><span>13.4 (a)</span></a> an <a href="#fig-fig_48_1"><span>13.4 (b)</span></a> show the outcome for <em>SLS</em> with <span class="math inline">\(\beta_{unseen} = 28.5\)</span> and <span class="math inline">\(\beta_{unseen} = 32.5\)</span>, respectively. Visually, both predictions are very close to the true centroid positions. Because of this high performance in showed in figures <a href="#fig-fig_49_0"><span>13.5 (a)</span></a> and <a href="#fig-fig_49_1"><span>13.5 (b)</span></a> two examples for extrapolation are given for <span class="math inline">\(\beta_{unseen} = 26.5\)</span> and <span class="math inline">\(\beta_{unseen} = 37\)</span>, respectively. For the first one, the outcome is very applicable. In contrast, <span class="math inline">\(\beta_{unseen} = 37\)</span> returns some deviations which are notably high. </p>
+<!--% ----------------- Interpolation ------------------------------------------------>
+<div id="fig-fig_48" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="fig-fig_48_0" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="../../3_Figs_Pyth/3_Task/2_Mod_CPE/4_lb_c_28.5.svg" class="lightbox" title="\beta_{unseen} = 28.5" data-gallery="quarto-lightbox-gallery-4"><img src="../../3_Figs_Pyth/3_Task/2_Mod_CPE/4_lb_c_28.5.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">(a) <span class="math inline">\(\beta_{unseen} = 28.5\)</span></figcaption>
+</figure>
+</div>
+<div id="fig-fig_48_1" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="../../3_Figs_Pyth/3_Task/2_Mod_CPE/5_lb_c_32.5.svg" class="lightbox" title="\beta_{unseen} = 32.5" data-gallery="quarto-lightbox-gallery-5"><img src="../../3_Figs_Pyth/3_Task/2_Mod_CPE/5_lb_c_32.5.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">(b) <span class="math inline">\(\beta_{unseen} = 32.5\)</span></figcaption>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.4— <em>SLS</em>, original vs.&nbsp;modeled centroid position, <span class="math inline">\(\beta_{unseen} = 28.5\)</span> and <span class="math inline">\(\beta_{unseen} = 32.5\)</span></figcaption><p></p>
+</figure>
+</div>
+<!--% ----------------- EXTRAPOLATION ------------------------------------------------>
+<div id="fig-fig_49" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="fig-fig_49_0" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="../../3_Figs_Pyth/3_Task/2_Mod_CPE/22_lb_c_26.5.svg" class="lightbox" title="\beta_{unseen} = 26.5" data-gallery="quarto-lightbox-gallery-6"><img src="../../3_Figs_Pyth/3_Task/2_Mod_CPE/22_lb_c_26.5.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">(a) <span class="math inline">\(\beta_{unseen} = 26.5\)</span></figcaption>
+</figure>
+</div>
+<div id="fig-fig_49_1" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="../../3_Figs_Pyth/3_Task/2_Mod_CPE/23_lb_c_37.0.svg" class="lightbox" title="\beta_{unseen} = 37" data-gallery="quarto-lightbox-gallery-7"><img src="../../3_Figs_Pyth/3_Task/2_Mod_CPE/23_lb_c_37.0.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">(b) <span class="math inline">\(\beta_{unseen} = 37\)</span></figcaption>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.5— <em>SLS</em>, original vs.&nbsp;modeled centroid position, extrapolated <span class="math inline">\(\beta_{unseen} = 26.5\)</span> and <span class="math inline">\(\beta_{unseen} = 37\)</span></figcaption><p></p>
+</figure>
+</div>
+<!--% --------- MODEL LOrenz K= 20-->
+<div id="fig-fig_50" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="../../3_Figs_Pyth/3_Task/2_Mod_CPE/6_lb_c_31.75.svg" class="lightbox" title="\beta_{unseen} = 31.75" data-gallery="quarto-lightbox-gallery-8"><img src="../../3_Figs_Pyth/3_Task/2_Mod_CPE/6_lb_c_31.75.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption"><span class="math inline">\(\beta_{unseen} = 31.75\)</span></figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="../../3_Figs_Pyth/3_Task/2_Mod_CPE/7_lb_c_51.75.svg" class="lightbox" title="\beta_{unseen} = 51.75" data-gallery="quarto-lightbox-gallery-9"><img src="../../3_Figs_Pyth/3_Task/2_Mod_CPE/7_lb_c_51.75.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption"><span class="math inline">\(\beta_{unseen} = 51.75\)</span></figcaption>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.6— <em>LS20</em>, original vs.&nbsp;modeled centroid position, <span class="math inline">\(\beta_{unseen} = 31.75\)</span> and <span class="math inline">\(\beta_{unseen} = 51.75\)</span></figcaption><p></p>
+</figure>
+</div>
+<!--% --------- MODEL 25_Four_Wing_1_K_15 ----------->
+<div id="fig-fig_52" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="../../3_Figs_Pyth/3_Task/2_Mod_CPE/8_lb_c_8.7.svg" class="lightbox" title="\beta_{unseen} = 8.7" data-gallery="quarto-lightbox-gallery-10"><img src="../../3_Figs_Pyth/3_Task/2_Mod_CPE/8_lb_c_8.7.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption"><span class="math inline">\(\beta_{unseen} = 8.7\)</span></figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="../../3_Figs_Pyth/3_Task/2_Mod_CPE/9_lb_c_10.1.svg" class="lightbox" title="\beta_{unseen} = 10.1" data-gallery="quarto-lightbox-gallery-11"><img src="../../3_Figs_Pyth/3_Task/2_Mod_CPE/9_lb_c_10.1.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption"><span class="math inline">\(\beta_{unseen} = 10.1\)</span></figcaption>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.7— <em>FW15</em>, original vs.&nbsp;modeled centroid position, <span class="math inline">\(\beta_{unseen} = 8.7\)</span> and <span class="math inline">\(\beta_{unseen} = 10.1\)</span></figcaption><p></p>
+</figure>
+</div>
+<p>Quantitative measurements are performed by applying the Mean Square Error (MSE) following equation <a href="#eq-eq_30_MSE"><span>13.4</span></a> . The variables are denoted as the number of samples <span class="math inline">\(n\)</span>, which in this case is equal to the number of centroids <span class="math inline">\(n = K\)</span>, the known <span class="math inline">\(f(x_k)\)</span> and the predicted <span class="math inline">\(y_k\)</span> centroid position. <span id="eq-eq_30_MSE"><span class="math display">\[
+\begin{equation}
+        MSE = \frac{1}{n} \, \sum_{i=1}^n \left(f(x_k) - y_k\right)^2
+        \label{eq_30_MSE}
+\end{equation}
+\tag{13.4}\]</span></span></p>
+<p>The measured MSE errors for all displayed results are summarized in table <a href="#tbl-tab_5_MSE"><span>13.1</span></a> . The MSE for results of <span class="math inline">\(\beta_{unseen} = 28.5\)</span> and <span class="math inline">\(\beta_{unseen} = 32.5\)</span> in figures <a href="#fig-fig_48"><span>13.4</span></a> is <span class="math inline">\(0.622\)</span> and <span class="math inline">\(0.677\)</span>, respectively. Consequently, the performance of <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> is also confirmed quantitatively. Figures in <a href="#fig-fig_50"><span>13.6</span></a> illustrate the outcome for <em>LS20</em> for <span class="math inline">\(\beta_{unseen} = 31.75\)</span> and <span class="math inline">\(\beta_{unseen} = 51.75\)</span>. In section <a href="1_Track_Results.html"><span>12</span></a> it is explained that for <em>LS20</em> cluster network deformations appear . Nevertheless, the outcome visually and quantitatively endorses the <em>CPE</em> modeling capabilities. Figures in <a href="#fig-fig_52"><span>13.7</span></a> depict the outcome for <em>FW15</em> for <span class="math inline">\(\beta_{unseen} = 8.7\)</span> and <span class="math inline">\(\beta_{unseen} = 10.1\)</span>. A few orange lines are visible, however overall the outcome is very satisfactory.</p>
+<div id="tbl-tab_5_MSE" class="anchored">
+<table class="table">
+<caption>Table&nbsp;13.1— MSE for different Model configurations and <span class="math inline">\(\vec{\beta}_{unseen}\)</span></caption>
+<thead>
+<tr class="header">
+<th><strong>Figure</strong></th>
+<th><strong>Model</strong></th>
+<th><span class="math inline">\(\boldsymbol{\beta_{unseen}}\)</span></th>
+<th><strong>MSE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="#fig-fig_48"><span>13.4</span></a></td>
+<td><em>SLS</em></td>
+<td><span class="math inline">\(28.5\)</span></td>
+<td><span class="math inline">\(0.622\)</span></td>
+</tr>
+<tr class="even">
+<td><a href="#fig-fig_48"><span>13.4</span></a></td>
+<td><em>SLS</em></td>
+<td><span class="math inline">\(32.5\)</span></td>
+<td><span class="math inline">\(0.677\)</span></td>
+</tr>
+<tr class="odd">
+<td><a href="#fig-fig_49"><span>13.5</span></a></td>
+<td><em>SLS</em></td>
+<td><span class="math inline">\(26.5\)</span></td>
+<td><span class="math inline">\(1.193\)</span></td>
+</tr>
+<tr class="even">
+<td><a href="#fig-fig_49"><span>13.5</span></a></td>
+<td><em>SLS</em></td>
+<td><span class="math inline">\(37\)</span></td>
+<td><span class="math inline">\(5.452\)</span></td>
+</tr>
+<tr class="odd">
+<td><a href="#fig-fig_50"><span>13.6</span></a></td>
+<td><em>LS20</em></td>
+<td><span class="math inline">\(31.75\)</span></td>
+<td><span class="math inline">\(1.857\)</span></td>
+</tr>
+<tr class="even">
+<td><a href="#fig-fig_50"><span>13.6</span></a></td>
+<td><em>LS20</em></td>
+<td><span class="math inline">\(51.75\)</span></td>
+<td><span class="math inline">\(2.536\)</span></td>
+</tr>
+<tr class="odd">
+<td><a href="#fig-fig_52"><span>13.7</span></a></td>
+<td><em>FW15</em></td>
+<td><span class="math inline">\(8.7\)</span></td>
+<td><span class="math inline">\(1.617\)</span></td>
+</tr>
+<tr class="even">
+<td><a href="#fig-fig_52"><span>13.7</span></a></td>
+<td><em>FW15</em></td>
+<td><span class="math inline">\(10.1\)</span></td>
+<td><span class="math inline">\(1.5\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>It can be concluded that the <em>CPE</em> modeling performance is satisfying. In the case of a few cluster network deformations, <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> is capable of providing acceptable results. However, as shown with <em>SLS</em>, if the model’s training range <span class="math inline">\(\vec{\beta}_{tr}\)</span> and the number of <span class="math inline">\(K\)</span> was selected appropriately, the MSE can be minimized.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'alternate';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../Data/1_Writing/3_Task/1_Track_Results.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tracking results</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../Data/1_Writing/3_Task/3_SVD_NMF.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Transition properties modeling</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link active" href="../../../Data/8_Add_2_Master/2_About_Author.html" aria-current="page">About author</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../Data/10_Law/2_Used_Hippocratic.html">License</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://discord.gg/EEsXp39DaA">Share thoughts</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"closeEffect":"zoom","descPosition":"right","selector":".lightbox"});</script>
+
+
+
+</body></html>

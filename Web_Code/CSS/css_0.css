@@ -1,0 +1,117 @@
+/* define some variables */
+:root {
+    --cl_Neon_Green: #ecff80;
+    --shiny_White: #fffdfa; 
+  } 
+
+
+/* tell that a tranformation shall be performed with a duration of 0.3 seconds and style easei-in */
+.figure{
+    transition: transform .3s ease-in;
+
+    /* let also the margins be applied as an animation */
+    transition: margin .3s ease-in;
+}
+
+/* here the actual transformation is performed  */
+.figure:hover{
+    transform: scale(1.3);
+    z-index: 999;
+    margin: 87px;
+    position: relative;
+}
+
+/* figure for which it is not desired to have any animation is called fig_Exclude*/
+#fig_Exclude{
+    /* your style rules for all figures except the one with id "exclude" */
+    z-index: 999;
+    display: grid; 
+    align-items: center;
+    justify-content: center;
+
+  }
+
+/* .modebar-btn{
+    visibility: hidden;
+} */
+
+/* plotly logo  */
+.modebar-btn--logo{
+    visibility: hidden;
+}
+
+
+/* --------------------------- popper_Tooltip_Gen --------------------------- */
+#popper_Tooltip_Gen {
+    background: #333;
+    color: var(--shiny_White);
+    font-weight: bold;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+    border-radius: 0.4rem;
+    display: none;
+  }
+
+#popper_Tooltip_Gen[data-show] {
+    display: block;
+  }
+
+#pop_Arrow_Gen,
+#pop_Arrow_Gen::before {
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: inherit;
+  }
+
+#pop_Arrow_Gen {
+    visibility: hidden;
+  }
+
+#pop_Arrow_Gen::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+  }
+
+#popper_Tooltip_Gen[data-popper-placement^='top'] > #pop_Arrow_Gen {
+    bottom: -0.25rem;
+  }
+
+#popper_Tooltip_Gen[data-popper-placement^='bottom'] > #pop_Arrow_Gen {
+    top: -0.25rem;
+  }
+
+#popper_Tooltip_Gen[data-popper-placement^='left'] > #pop_Arrow_Gen {
+    right: -0.25rem;
+  }
+
+#popper_Tooltip_Gen[data-popper-placement^='right'] > #pop_Arrow_Gen {
+    left: -0.25rem;
+  }
+
+/* the feedback <Button> above the right bar */
+#feedback_Button{
+  border: none;
+
+}
+
+/* the feedback <a> above the right bar */
+#feedback_A{
+  display: grid;
+  border-radius: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+
+  grid-template-columns: auto auto;
+  grid-gap: 0.77rem; /* Adjust this value to add more or less spacing between the SVG and the link text */
+
+  /* algin all grid items */
+  justify-items: center;
+}
+
+
+.custom-color{
+  color: var(--cl_Neon_Green);
+}
