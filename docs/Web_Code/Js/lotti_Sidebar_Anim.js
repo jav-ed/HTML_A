@@ -21,7 +21,7 @@ function complete_Check(second_Anim){
         
             // load the second animation -> can be played when eventListender('ready') is called
 
-            var path_0 = `../7_Animation/${rocket_Name}`;
+            var path_0 = `/Data/7_Animation/${rocket_Name}`;
             var path_1 = `../../7_Animation/${rocket_Name}`;
             var path_2 = `/Data/7_Animation/${rocket_Name}`;
 
@@ -43,7 +43,7 @@ function complete_Check(second_Anim){
             console.log("second animation completed");
 
             // load back the first animation
-            var path_0 = `../7_Animation/${aircraft_Name}`;
+            var path_0 = `/Data/7_Animation/${aircraft_Name}`;
             var path_1 = `../../7_Animation/${aircraft_Name}`;
             var path_2 = `Data/7_Animation/${aircraft_Name}`;
 
