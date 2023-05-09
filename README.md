@@ -3,7 +3,9 @@ title: Master Thesis - Flow predictions using control-oriented cluster-based net
 emoji: 📚
 ---
 
-# Overview
+[https://jav-ed.github.io/master_Thesis/](https://jav-ed.github.io/master_Thesis/)
+
+## Overview
 This is the web verison of my master thesis - the title of the master thesis is: Flow predictions using control-oriented cluster-based network modeling.\newline 
 
 The web version of the master thesis can be found at . It is an interactive ..
@@ -13,7 +15,7 @@ The web version of the master thesis, available at [https://jav-ed.github.io/mas
 The used license is: [![Hippocratic License HL3-BDS-CL-ECO-EXTR-MEDIA-MIL-SV-XUAR](https://img.shields.io/static/v1?label=Hippocratic%20License&message=HL3-BDS-CL-ECO-EXTR-MEDIA-MIL-SV-XUAR&labelColor=5e2751&color=bc8c3d)](https://firstdonoharm.dev/version/3/0/bds-cl-eco-extr-media-mil-sv-xuar.html)
 
 
-# Abstract 
+##  Abstract 
 
 In this master thesis, a data-driven modeling technique is proposed. 
 It enables making predictions for general dynamic systems for unknown model parameter values or operating conditions.
