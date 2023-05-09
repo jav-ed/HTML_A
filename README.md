@@ -1,6 +1,7 @@
 ---
-title: Master Thesis - Flow predictions using control-oriented cluster-based network modeling
-emoji: 📚
+type: Master thesis - TU Braunschweig (Germany) 
+title: Flow predictions using control-oriented cluster-based network modeling
+access: [https://jav-ed.github.io/master_Thesis/](https://jav-ed.github.io/master_Thesis/) 📚
 ---
 
 [https://jav-ed.github.io/master_Thesis/](https://jav-ed.github.io/master_Thesis/)
