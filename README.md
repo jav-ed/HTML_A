@@ -10,9 +10,9 @@ The web version of the master thesis, available at [https://jav-ed.github.io/mas
 <br/>
 <br/>
 
-type: Master thesis - TU Braunschweig (Germany)\newline
+type: Master thesis - TU Braunschweig (Germany)
 
-title: Flow predictions using control-oriented cluster-based network modeling\newline
+title: Flow predictions using control-oriented cluster-based network modeling
 
 access: https://jav-ed.github.io/master_Thesis/  📚
 
