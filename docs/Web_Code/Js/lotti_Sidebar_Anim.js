@@ -23,7 +23,7 @@ function complete_Check(second_Anim){
 
             var path_0 = `../../../7_Animation/${rocket_Name}`;
             var path_1 = `../../7_Animation/${rocket_Name}`;
-            var path_2 = `Data/7_Animation/${rocket_Name}`;
+            var path_2 = `/Data/7_Animation/${rocket_Name}`;
 
             // check which file path is valid, use the valid one and load the player
             loadFileWithFallback(path_0, path_1, path_2, player);
@@ -45,7 +45,7 @@ function complete_Check(second_Anim){
             // load back the first animation
             var path_0 = `../../../7_Animation/${aircraft_Name}`;
             var path_1 = `../../7_Animation/${aircraft_Name}`;
-            var path_2 = `Data/7_Animation/${aircraft_Name}`;
+            var path_2 = `/Data/7_Animation/${aircraft_Name}`;
 
             // check which file path is valid, use the valid one and load the player
             loadFileWithFallback(path_0, path_1, path_2, player);
