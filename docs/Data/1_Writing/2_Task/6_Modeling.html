@@ -512,6 +512,10 @@ const aElement = document.createElement('a');
 // Set the href attribute of the <a> element
 aElement.href = 'https://discord.gg/EEsXp39DaA';
 aElement.id = 'feedback_A';
+
+// open link in a new tab
+aElement.setAttribute("target","_blank");
+
 button_Elem.id = 'feedback_Button';
 
 // button_Elem.setAttribute("aria-describedby","popper_Tooltip_Gen");
@@ -620,7 +624,7 @@ run_Pop(popcorn);
 <p>In this section, the fourth main step of <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a>, i.e., modeling, is elaborated. The data and workflow is described in figure <a href="#fig-fig_42"><span>10.1</span></a> . It comprises two main sub-tasks, which are modeling the <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cpevol" id="cpevolgls" class="gls"><b>C</b>entroid <b>P</b>osition <b>E</b>volution (CPE)</a> and modeling the transition properties tensors <span class="math inline">\(\boldsymbol Q / \boldsymbol T\)</span>. The settings are as usually defined in <em>settings.py</em> and the extracted attributes are distributed to the sub-tasks. Modeling the <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cpevol" id="cpevolgls" class="gls">CPE<span class="gls_Content"><b>C</b>entroid <b>P</b>osition <b>E</b>volution</span></a> and the <span class="math inline">\(\boldsymbol Q/ \boldsymbol T\)</span> tensors can be executed separately from each other. If the output of one of the two modeling sub-steps is at hand, <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> is not forced to recalculate both modeling sub-steps. Since the tracked states are used as training data to run the modeling they are prerequisites for both modeling parts. The modeling of the centroid position shall be explained in the upcoming subsection <a href="#sec-subsec_2_4_1_CPE"><span>10.0.1</span></a>, followed by the explanation of the transition properties in subsection <a href="#sec-subsec_2_4_2_QT"><span>10.0.2</span></a>. A comparison between this <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> and the <em>first CNMc</em> version is provided at the end of the respective subsections. The results of both modeling steps can be found in section <a href="../3_Task/2_Mod_CPE.html"><span>13</span></a> and <a href="../3_Task/3_SVD_NMF.html"><span>14</span></a></p>
 <div id="fig-fig_42" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/2_Modeling/0_Modeling.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Data and workflow of the fourth step: Modeling"><img src="../../3_Figs_Pyth/2_Task/2_Modeling/0_Modeling.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/2_Modeling/0_Modeling.svg" class="lightbox" title="Data and workflow of the fourth step: Modeling" data-gallery="quarto-lightbox-gallery-1"><img src="../../3_Figs_Pyth/2_Task/2_Modeling/0_Modeling.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;10.1— Data and workflow of the fourth step: Modeling</figcaption>
 </figure>
 </div>
@@ -629,7 +633,7 @@ run_Pop(popcorn);
 <p>In this subsection, the modeling of the <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cpevol" id="cpevolgls" class="gls">CPE<span class="gls_Content"><b>C</b>entroid <b>P</b>osition <b>E</b>volution</span></a> is described. The objective is to find a surrogate model, which returns all <span class="math inline">\(K\)</span> centroid positions for an unseen <span class="math inline">\(\beta_{unseen}\)</span>. The training data for this are the tracked centroids from the previous step, which is described in section <a href="3_Tracking.html"><span>9</span></a>. To explain the modeling of the <em>CPE</em>, figure <a href="#fig-fig_43"><span>10.2</span></a> shall be inspected. The model parameter values which shall be used to train the model <span class="math inline">\(\vec{\beta_{tr}}\)</span> are used for generating a so-called candidate library matrix <span class="math inline">\(\boldsymbol{\Theta}\,(\vec{\beta_{tr}})\)</span>. The candidate library matrix <span class="math inline">\(\boldsymbol{\Theta}\,(\vec{\beta_{tr}})\)</span> is obtained making use of a function of <em>pySindy</em> <span class="citation" data-cites="Silva2020 Kaptanoglu2022 Brunton2016">(<a href="../5_Additional/10_References.html#ref-Silva2020" role="doc-biblioref">Silva et al. 2020</a>; <a href="../5_Additional/10_References.html#ref-Kaptanoglu2022" role="doc-biblioref">Kaptanoglu et al. 2022</a>; <a href="../5_Additional/10_References.html#ref-Brunton2016" role="doc-biblioref">S. L. Brunton, Proctor, and Kutz 2016</a>)</span>. In <span class="citation" data-cites="Brunton2016">(<a href="../5_Additional/10_References.html#ref-Brunton2016" role="doc-biblioref">S. L. Brunton, Proctor, and Kutz 2016</a>)</span> the term <span class="math inline">\(\boldsymbol{\Theta}\,(\vec{\beta_{tr}})\)</span> is explained well. However, in brief terms, it allows the construction of a matrix, which comprises the output of defined functions. These functions could be, e.g., a linear, polynomial, trigonometrical or any other non-linear function. Made-up functions that include logical conditions can also be applied. </p>
 <div id="fig-fig_43" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/2_Modeling/1_Pos_Mod.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Data and workflow of modeling the "><img src="../../3_Figs_Pyth/2_Task/2_Modeling/1_Pos_Mod.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/2_Modeling/1_Pos_Mod.svg" class="lightbox" title="Data and workflow of modeling the " data-gallery="quarto-lightbox-gallery-2"><img src="../../3_Figs_Pyth/2_Task/2_Modeling/1_Pos_Mod.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;10.2— Data and workflow of modeling the </figcaption>
 </figure>
 </div>
@@ -683,7 +687,7 @@ run_Pop(popcorn);
 <p>In this subsection, the goal is to explain how the transition properties are modeled. The transition properties are the two tensors <span class="math inline">\(\boldsymbol Q\)</span> and <span class="math inline">\(\boldsymbol T\)</span>, which consist of transition probability from one centroid to another and the corresponding transition time, respectively. For further details about the transition properties, the reader is referred to section <a href="../1_Task/3_CNM.html"><span>4</span></a>. Modeling <span class="math inline">\(\boldsymbol Q / \boldsymbol T\)</span> means to find surrogate models that capture the trained behavior and can predict the tensors for unseen model parameter values <span class="math inline">\(\boldsymbol{\tilde{Q}}(\vec{\beta}_{unseeen}) ,\, \boldsymbol{\tilde{T}}(\vec{\beta}_{unseeen})\)</span>. To go through the data and workflow figure <a href="#fig-fig_44"><span>10.3</span></a> shall be considered.</p>
 <div id="fig-fig_44" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/2_Modeling/2_QT_Mod.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Data and workflow of \boldsymbol Q / \boldsymbol T modeling"><img src="../../3_Figs_Pyth/2_Task/2_Modeling/2_QT_Mod.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/2_Modeling/2_QT_Mod.svg" class="lightbox" title="Data and workflow of \boldsymbol Q / \boldsymbol T modeling" data-gallery="quarto-lightbox-gallery-3"><img src="../../3_Figs_Pyth/2_Task/2_Modeling/2_QT_Mod.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;10.3— Data and workflow of <span class="math inline">\(\boldsymbol Q / \boldsymbol T\)</span> modeling</figcaption>
 </figure>
 </div>
@@ -1161,7 +1165,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"right","loop":true,"selector":".lightbox","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"right","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":true});</script>
 
 
 

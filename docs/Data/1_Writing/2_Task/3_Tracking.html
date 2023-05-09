@@ -511,6 +511,10 @@ const aElement = document.createElement('a');
 // Set the href attribute of the <a> element
 aElement.href = 'https://discord.gg/EEsXp39DaA';
 aElement.id = 'feedback_A';
+
+// open link in a new tab
+aElement.setAttribute("target","_blank");
+
 button_Elem.id = 'feedback_Button';
 
 // button_Elem.setAttribute("aria-describedby","popper_Tooltip_Gen");
@@ -1257,7 +1261,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"right","openEffect":"zoom","selector":".lightbox","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"right","selector":".lightbox","loop":true,"openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 

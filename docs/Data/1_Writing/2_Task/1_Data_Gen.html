@@ -505,6 +505,10 @@ const aElement = document.createElement('a');
 // Set the href attribute of the <a> element
 aElement.href = 'https://discord.gg/EEsXp39DaA';
 aElement.id = 'feedback_A';
+
+// open link in a new tab
+aElement.setAttribute("target","_blank");
+
 button_Elem.id = 'feedback_Button';
 
 // button_Elem.setAttribute("aria-describedby","popper_Tooltip_Gen");
@@ -618,7 +622,7 @@ run_Pop(popcorn);
 <p>Moreover, if the dimension <span class="math inline">\(n\)</span> is very large, accuracy demands may make working with matrices unavoidable. As a result, more powerful computers are required and the computational time is expected to be increased. For this work, an attempt is made to represent non-linear differential equations by a surrogate model. In addition, trajectories of many <span class="math inline">\(\vec{\beta }\)</span> can be handled quite efficiently. Therefore, it attempted to provide sufficient trajectories as training data. Having said that the data and workflow of this step, i.e., data generation, shall be described. The general overview is depicted in figure <a href="#fig-fig_4_Data_Gen"><span>7.1</span></a> . Data generation corresponding settings are passed to its step, which invokes the <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#ode" id="odegls" class="gls">ODE<span class="gls_Content"><b>O</b>rdinary <b>D</b>ifferential <b>E</b>quation</span></a> solver for the range of selected <span class="math inline">\(\vec{\beta}\)</span>. The trajectories are plotted and, both, all the obtained trajectories <span class="math inline">\(F_(\vec{\beta})\)</span> and their plots are saved. Note that <span class="math inline">\(\vec{\beta}\)</span> indicates that one differential equation is solved for selected <span class="math inline">\(\beta\)</span> values within a range of model parameter values <span class="math inline">\(\vec{\beta}\)</span>.</p>
 <div id="fig-fig_4_Data_Gen" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/1_Data_Gen.svg" class="lightbox" title="Data and workflow of the first step: Data generation" data-gallery="quarto-lightbox-gallery-1"><img src="../../3_Figs_Pyth/2_Task/1_Data_Gen.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/1_Data_Gen.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Data and workflow of the first step: Data generation"><img src="../../3_Figs_Pyth/2_Task/1_Data_Gen.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;7.1— Data and workflow of the first step: Data generation</figcaption>
 </figure>
 </div>
@@ -712,7 +716,7 @@ run_Pop(popcorn);
 <!-- % ============================================================================== -->
 <div id="fig-fig_5_Sprott" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/2_Sprott_V1.svg" class="lightbox" title="Default model: Sprott_V_1 @eq-eq_11_Sprott_V_1 with \beta =9" data-gallery="quarto-lightbox-gallery-2"><img src="../../3_Figs_Pyth/2_Task/2_Sprott_V1.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/2_Sprott_V1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Default model: Sprott_V_1 @eq-eq_11_Sprott_V_1 with \beta =9"><img src="../../3_Figs_Pyth/2_Task/2_Sprott_V1.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;7.2— Default model: Sprott_V_1 <a href="#eq-eq_11_Sprott_V_1"><span>7.5</span></a> with <span class="math inline">\(\beta =9\)</span></figcaption>
 </figure>
 </div>
@@ -720,13 +724,13 @@ run_Pop(popcorn);
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_6_Tornado" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/3_Tornado.svg" class="lightbox" title="Default model: Tornado @eq-eq_12_Tornado with \beta =16.78, view: 1" data-gallery="quarto-lightbox-gallery-3"><img src="../../3_Figs_Pyth/2_Task/3_Tornado.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/3_Tornado.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Default model: Tornado @eq-eq_12_Tornado with \beta =16.78, view: 1"><img src="../../3_Figs_Pyth/2_Task/3_Tornado.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;7.3— Default model: Tornado <a href="#eq-eq_12_Tornado"><span>7.6</span></a> with <span class="math inline">\(\beta =16.78\)</span>, view: 1</figcaption>
 </figure>
 </div>
 <div id="fig-fig_7_Tornado" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/4_Tornado.svg" class="lightbox" title="Default model: Tornado @eq-eq_12_Tornado with \beta =16.78, view: 2" data-gallery="quarto-lightbox-gallery-4"><img src="../../3_Figs_Pyth/2_Task/4_Tornado.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/4_Tornado.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Default model: Tornado @eq-eq_12_Tornado with \beta =16.78, view: 2"><img src="../../3_Figs_Pyth/2_Task/4_Tornado.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;7.4— Default model: Tornado <a href="#eq-eq_12_Tornado"><span>7.6</span></a> with <span class="math inline">\(\beta =16.78\)</span>, view: 2</figcaption>
 </figure>
 </div>
@@ -736,13 +740,13 @@ run_Pop(popcorn);
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_8_Tornado" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/5_Tornado.svg" class="lightbox" title="Default model: Tornado @eq-eq_12_Tornado with \beta =16.78, view: 3" data-gallery="quarto-lightbox-gallery-5"><img src="../../3_Figs_Pyth/2_Task/5_Tornado.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/5_Tornado.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Default model: Tornado @eq-eq_12_Tornado with \beta =16.78, view: 3"><img src="../../3_Figs_Pyth/2_Task/5_Tornado.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;7.5— Default model: Tornado <a href="#eq-eq_12_Tornado"><span>7.6</span></a> with <span class="math inline">\(\beta =16.78\)</span>, view: 3</figcaption>
 </figure>
 </div>
 <div id="fig-fig_9_Insect" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/6_Insect.svg" class="lightbox" title="Default model: Insect @eq-eq_13_Insect with \beta =7, view: 1" data-gallery="quarto-lightbox-gallery-6"><img src="../../3_Figs_Pyth/2_Task/6_Insect.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/6_Insect.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Default model: Insect @eq-eq_13_Insect with \beta =7, view: 1"><img src="../../3_Figs_Pyth/2_Task/6_Insect.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;7.6— Default model: Insect <a href="#eq-eq_13_Insect"><span>7.7</span></a> with <span class="math inline">\(\beta =7\)</span>, view: 1</figcaption>
 </figure>
 </div>
@@ -752,13 +756,13 @@ run_Pop(popcorn);
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_10_Insect" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/7_Insect.svg" class="lightbox" title="Default model: Insect @eq-eq_13_Insect with \beta =7, view: 2" data-gallery="quarto-lightbox-gallery-7"><img src="../../3_Figs_Pyth/2_Task/7_Insect.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/7_Insect.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Default model: Insect @eq-eq_13_Insect with \beta =7, view: 2"><img src="../../3_Figs_Pyth/2_Task/7_Insect.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;7.7— Default model: Insect <a href="#eq-eq_13_Insect"><span>7.7</span></a> with <span class="math inline">\(\beta =7\)</span>, view: 2</figcaption>
 </figure>
 </div>
 <div id="fig-fig_11_Insect" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/8_Insect.svg" class="lightbox" title="Default model: Insect @eq-eq_13_Insect with \beta =7, view: 3" data-gallery="quarto-lightbox-gallery-8"><img src="../../3_Figs_Pyth/2_Task/8_Insect.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/8_Insect.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Default model: Insect @eq-eq_13_Insect with \beta =7, view: 3"><img src="../../3_Figs_Pyth/2_Task/8_Insect.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;7.8— Default model: Insect <a href="#eq-eq_13_Insect"><span>7.7</span></a> with <span class="math inline">\(\beta =7\)</span>, view: 3</figcaption>
 </figure>
 </div>
@@ -1191,7 +1195,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"right","openEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"right","openEffect":"zoom"});</script>
 
 
 

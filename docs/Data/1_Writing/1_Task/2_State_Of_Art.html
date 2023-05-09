@@ -508,6 +508,10 @@ const aElement = document.createElement('a');
 // Set the href attribute of the <a> element
 aElement.href = 'https://discord.gg/EEsXp39DaA';
 aElement.id = 'feedback_A';
+
+// open link in a new tab
+aElement.setAttribute("target","_blank");
+
 button_Elem.id = 'feedback_Button';
 
 // button_Elem.setAttribute("aria-describedby","popper_Tooltip_Gen");
