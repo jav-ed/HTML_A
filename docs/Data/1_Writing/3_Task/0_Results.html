@@ -489,6 +489,7 @@ aElement.id = 'feedback_A';
 
 // open link in a new tab
 aElement.setAttribute("target","_blank");
+aElement.setAttribute("rel", "noopener noreferrer");
 
 button_Elem.id = 'feedback_Button';
 
@@ -604,7 +605,7 @@ run_Pop(popcorn);
 <p>The third model is designated as <em>FW15</em>. It is based on the <em>Four Wing</em> set of equations <a href="../2_Task/1_Data_Gen.html#eq-eq_10_4_Wing"><span>7.4</span></a> and an illustrative trajectory is given in figure <a href="#fig-fig_37"><span>11.1</span></a> . The number of centroids is <span class="math inline">\(K=15\)</span> and it is constructed with the following configuration <span class="math inline">\(\vec{\beta }_{tr} = [\, \beta_0 = 8 ; \, \beta_{end} = 11 \,], \, n_{\beta, tr} = 13\)</span>.</p>
 <div id="fig-fig_37" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/1_Tracking/10_1_Traj_8.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="FW15 @eq-eq_10_4_Wing trajectory for \beta = 8"><img src="../../3_Figs_Pyth/3_Task/1_Tracking/10_1_Traj_8.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/1_Tracking/10_1_Traj_8.svg" class="lightbox" title="FW15 @eq-eq_10_4_Wing trajectory for \beta = 8" data-gallery="quarto-lightbox-gallery-1"><img src="../../3_Figs_Pyth/3_Task/1_Tracking/10_1_Traj_8.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;11.1— <em>FW15</em> <a href="../2_Task/1_Data_Gen.html#eq-eq_10_4_Wing"><span>7.4</span></a> trajectory for <span class="math inline">\(\beta = 8\)</span></figcaption>
 </figure>
 </div>
@@ -996,7 +997,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"right","closeEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"closeEffect":"zoom","descPosition":"right"});</script>
 
 
 

@@ -514,6 +514,7 @@ aElement.id = 'feedback_A';
 
 // open link in a new tab
 aElement.setAttribute("target","_blank");
+aElement.setAttribute("rel", "noopener noreferrer");
 
 button_Elem.id = 'feedback_Button';
 
@@ -627,7 +628,7 @@ run_Pop(popcorn);
 <!-- % ============================================================================== -->
 <div id="fig-fig_21" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/0_Matching.svg" class="lightbox" title="Unrealistic tracking example for the Lorenz system with \beta_i=31.333, \, \beta_j=32.167, \, K = 10" data-gallery="quarto-lightbox-gallery-1"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/0_Matching.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/0_Matching.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Unrealistic tracking example for the Lorenz system with \beta_i=31.333, \, \beta_j=32.167, \, K = 10"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/0_Matching.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;9.1— Unrealistic tracking example for the Lorenz system with <span class="math inline">\(\beta_i=31.333, \, \beta_j=32.167, \, K = 10\)</span></figcaption>
 </figure>
 </div>
@@ -640,7 +641,7 @@ run_Pop(popcorn);
 <p>The orange legend on the right side of figure <a href="#fig-fig_21"><span>9.1</span></a> outlines the tracked results. In this rare and not the general case, the <em>inter</em> <span class="math inline">\(\beta\)</span> labeling is straightforward in two ways. First, the closest centroids from <span class="math inline">\(\beta_i\)</span> to <span class="math inline">\(\beta_j\)</span> have the same label. Generally, this is not the case, since the centroid labeling is assigned randomly. Second, the <em>inter</em> <span class="math inline">\(\beta\)</span> centroid positions can be matched easily visually. Ambiguous regions, where visually tracking is not possible, are not present. To help understand what ambiguous regions could look like, figure <a href="#fig-fig_22"><span>9.2</span></a> shall be viewed. It illustrates the outcome of the Lorenz system <a href="1_Data_Gen.html#eq-eq_6_Lorenz"><span>7.1</span></a> with <span class="math inline">\(\beta_i=39.004,\, \beta_j = 39.987\)</span> and with a number of centroids of <span class="math inline">\(K= 50\)</span>. Overall, the tracking seems to be fairly obvious, but paying attention to the centroids in the center, matching the centroids becomes more difficult. This is a byproduct of the higher number of centroids <span class="math inline">\(K\)</span>. With more available centroids, more centroids can fill a small area. As a consequence, multiple possible reasonable matchings are allowed. Note, that due to spacing limitations, not all tracking results are listed in the right orange legend of figure <a href="#fig-fig_22"><span>9.2</span></a> . The emergence of such ambiguous regions is the main driver why tracking is considered to be complex.</p>
 <div id="fig-fig_22" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/2_Ambiguous_Regions.svg" class="lightbox" title="Ambiguous regions in the tracking example for the Lorenz system with \beta_i=39.004,\, \beta_j = 39.987,\, K= 50" data-gallery="quarto-lightbox-gallery-2"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/2_Ambiguous_Regions.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/2_Ambiguous_Regions.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Ambiguous regions in the tracking example for the Lorenz system with \beta_i=39.004,\, \beta_j = 39.987,\, K= 50"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/2_Ambiguous_Regions.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;9.2— Ambiguous regions in the tracking example for the Lorenz system with <span class="math inline">\(\beta_i=39.004,\, \beta_j = 39.987,\, K= 50\)</span></figcaption>
 </figure>
 </div>
@@ -648,7 +649,7 @@ run_Pop(popcorn);
 <p>In figure <a href="#fig-fig_23"><span>9.3</span></a> a second example of tracked outcome for the Lorenz system <a href="1_Data_Gen.html#eq-eq_6_Lorenz"><span>7.1</span></a> with <span class="math inline">\(\beta_i=30.5,\, \beta_j=31.333, \, K = 10\)</span> is given. Here it can be inspected that the immediate <em>inter</em> <span class="math inline">\(\beta\)</span> centroid neighbors do not adhere to the same label. Hence, it is representative of a more general encountered case. The latter is only true when the <span class="math inline">\(K\)</span> is chosen in a reasonable magnitude. The reason why centroids are tracked by employing distance measurements is grounded in the following. If the clustering parameter <em>n_init</em> is chosen appropriately (see <a href="2_Clustering.html#sec-subsec_2_2_1_Parameter_Study"><span>8.0.1</span></a>), the position of the centroids are expected to change only slightly when <span class="math inline">\(\beta\)</span> is changed . In simpler terms, a change in <span class="math inline">\(\beta\)</span> should not move a centroid much, if the clustering step was performed satisfactorily in the first place.</p>
 <div id="fig-fig_23" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/1_Non_Matching.svg" class="lightbox" title="Realistic tracking example for the Lorenz system with \beta_i=30.5 and \beta_j=31.333" data-gallery="quarto-lightbox-gallery-3"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/1_Non_Matching.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/1_Non_Matching.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Realistic tracking example for the Lorenz system with \beta_i=30.5 and \beta_j=31.333"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/1_Non_Matching.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;9.3— Realistic tracking example for the Lorenz system with <span class="math inline">\(\beta_i=30.5\)</span> and <span class="math inline">\(\beta_j=31.333\)</span></figcaption>
 </figure>
 </div>
@@ -662,7 +663,7 @@ run_Pop(popcorn);
 <p>After having explained 3 methods, which did not lead to a satisfactory outcome, the data and workflow of the final successful approach shall be presented. First very concisely, followed by an in-depth account. For that, figure <a href="#fig-fig_24_Tracking_Workflow"><span>9.4</span></a> shall be analyzed. The initial input is obtained through <em>settings.py</em>, where execution, storage and plotting attributes are defined. For the further sub-steps, it shall be noted that the index big O stands for output of the respective sub-step. The clustered results from step two, described in section <a href="2_Clustering.html"><span>8</span></a> are used as input for the so-called ordering step. The ordered state can be stored and plotted if desired and exploited to calculate a cost matrix <span class="math inline">\(\boldsymbol A (\vec{\beta})\)</span>. </p>
 <div id="fig-fig_24_Tracking_Workflow" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/3_Track.svg" class="lightbox" title="General data and workflow overview of the third step, tracking" data-gallery="quarto-lightbox-gallery-4"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/3_Track.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/3_Track.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="General data and workflow overview of the third step, tracking"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/3_Track.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;9.4— General data and workflow overview of the third step, tracking</figcaption>
 </figure>
 </div>
@@ -675,13 +676,13 @@ run_Pop(popcorn);
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_25_Clust" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/4_Clus_30_5.svg" class="lightbox" title="Initial State - centroids of the Lorenz system @eq-eq_6_Lorenz \beta =30.5" data-gallery="quarto-lightbox-gallery-5"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/4_Clus_30_5.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/4_Clus_30_5.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Initial State - centroids of the Lorenz system @eq-eq_6_Lorenz \beta =30.5"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/4_Clus_30_5.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;9.5— Initial State - centroids of the Lorenz system <a href="1_Data_Gen.html#eq-eq_6_Lorenz"><span>7.1</span></a> <span class="math inline">\(\beta =30.5\)</span></figcaption>
 </figure>
 </div>
 <div id="fig-fig_26_Ord" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/5_Ordered_30_5.svg" class="lightbox" title="Ordered State - centroids of the Lorenz system @eq-eq_6_Lorenz \beta =30.5" data-gallery="quarto-lightbox-gallery-6"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/5_Ordered_30_5.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/2_Task/1_Tracking/5_Ordered_30_5.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Ordered State - centroids of the Lorenz system @eq-eq_6_Lorenz \beta =30.5"><img src="../../3_Figs_Pyth/2_Task/1_Tracking/5_Ordered_30_5.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;9.6— Ordered State - centroids of the Lorenz system <a href="1_Data_Gen.html#eq-eq_6_Lorenz"><span>7.1</span></a> <span class="math inline">\(\beta =30.5\)</span></figcaption>
 </figure>
 </div>
@@ -1261,7 +1262,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"right","selector":".lightbox","loop":true,"openEffect":"zoom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"right","openEffect":"zoom","loop":true,"selector":".lightbox","closeEffect":"zoom"});</script>
 
 
 

@@ -515,6 +515,7 @@ aElement.id = 'feedback_A';
 
 // open link in a new tab
 aElement.setAttribute("target","_blank");
+aElement.setAttribute("rel", "noopener noreferrer");
 
 button_Elem.id = 'feedback_Button';
 
@@ -633,13 +634,13 @@ run_Pop(popcorn);
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_72" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/0_lb_28.5_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="True,  and  predicted trajectories"><img src="../../3_Figs_Pyth/3_Task/4_SLS/0_lb_28.5_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/0_lb_28.5_All.svg" class="lightbox" title="True,  and  predicted trajectories" data-gallery="quarto-lightbox-gallery-1"><img src="../../3_Figs_Pyth/3_Task/4_SLS/0_lb_28.5_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;16.1— True, and predicted trajectories</figcaption>
 </figure>
 </div>
 <div id="fig-fig_73" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/1_lb_28.5.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title=" and  predicted trajectories"><img src="../../3_Figs_Pyth/3_Task/4_SLS/1_lb_28.5.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/1_lb_28.5.svg" class="lightbox" title=" and  predicted trajectories" data-gallery="quarto-lightbox-gallery-2"><img src="../../3_Figs_Pyth/3_Task/4_SLS/1_lb_28.5.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;16.2— and predicted trajectories</figcaption>
 </figure>
 </div>
@@ -653,7 +654,7 @@ run_Pop(popcorn);
 <p>A close-up of the movement of the different axes is shown in the picture <a href="#fig-fig_74"><span>16.3</span></a> . Here, as well, the same can be observed as described above. Namely, the predicted <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> trajectory is not a one-to-one reproduction of the original trajectory. However, the characteristics, i.e., the magnitude of the motion in all 3 directions (x, y, z) and the shape of the oscillations, are very similar to the original trajectory. Note that even though the true and predicted trajectories are utilized to assess, whether the characteristical behavior could be extracted, a single evaluation based on the trajectories is not sufficient and often not advised or even possible. In complex systems, trajectories can change rapidly while dynamical features persist <span class="citation" data-cites="Fernex2021a">(<a href="../5_Additional/10_References.html#ref-Fernex2021a" role="doc-biblioref">Fernex, Semaan, and Noack 2021</a>)</span>. In <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> the predicted trajectories are obtained through the <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnm" id="cnmgls" class="gls">CNM<span class="gls_Content"><b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> propagation, which itself is based on a probabilistic model, i.e.&nbsp;the <span class="math inline">\(\boldsymbol Q\)</span> tensor. Thus, matching full trajectories becomes even more unrealistic. The latter two statements highlight yet again that more than one method of measuring quality is needed. To further support the generated outcome the autocorrelation and <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cpd" id="cpdgls" class="gls">CPD<span class="gls_Content"><b>C</b>luster <b>P</b>robability <b>D</b>istribution</span></a> in figure <a href="#fig-fig_75"><span>16.4</span></a> and <a href="#fig-fig_76"><span>16.5</span></a>, respectively, shall be considered. It can be inspected that the <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnm" id="cnmgls" class="gls">CNM<span class="gls_Content"><b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> and <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cnmc" id="cnmcgls" class="gls">CNMc<span class="gls_Content"><b>c</b>ontrol-oriented <b>C</b>luster-based <b>N</b>etwork <b>M</b>odeling</span></a> autocorrelations are matching the true autocorrelation in the shape favorably well. Nonetheless, the degree of reflecting the magnitude fully decreases quite fast. Considering the <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cpd" id="cpdgls" class="gls">CPD<span class="gls_Content"><b>C</b>luster <b>P</b>robability <b>D</b>istribution</span></a>, it can be recorded that the true <a href="../../../Data/1_Writing/0_Deco/3_Used_Abbrev.html#cpd" id="cpdgls" class="gls">CPD<span class="gls_Content"><b>C</b>luster <b>P</b>robability <b>D</b>istribution</span></a> could overall be reproduced satisfactorily.</p>
 <div id="fig-fig_74" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/2_lb_28.5_3V_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="SLS, \beta_{unseen}=28.5, \, L=1, true,  and  predicted trajectories as 2d graphs"><img src="../../3_Figs_Pyth/3_Task/4_SLS/2_lb_28.5_3V_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/2_lb_28.5_3V_All.svg" class="lightbox" title="SLS, \beta_{unseen}=28.5, \, L=1, true,  and  predicted trajectories as 2d graphs" data-gallery="quarto-lightbox-gallery-3"><img src="../../3_Figs_Pyth/3_Task/4_SLS/2_lb_28.5_3V_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;16.3— <em>SLS</em>, <span class="math inline">\(\beta_{unseen}=28.5, \, L=1\)</span>, true, and predicted trajectories as 2d graphs</figcaption>
 </figure>
 </div>
@@ -661,13 +662,13 @@ run_Pop(popcorn);
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_75" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/3_lb_3_all_28.5.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="autocorrelation"><img src="../../3_Figs_Pyth/3_Task/4_SLS/3_lb_3_all_28.5.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/3_lb_3_all_28.5.svg" class="lightbox" title="autocorrelation" data-gallery="quarto-lightbox-gallery-4"><img src="../../3_Figs_Pyth/3_Task/4_SLS/3_lb_3_all_28.5.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;16.4— autocorrelation</figcaption>
 </figure>
 </div>
 <div id="fig-fig_76" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/4_lb_28.5.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title=""><img src="../../3_Figs_Pyth/3_Task/4_SLS/4_lb_28.5.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/4_lb_28.5.svg" class="lightbox" title="" data-gallery="quarto-lightbox-gallery-5"><img src="../../3_Figs_Pyth/3_Task/4_SLS/4_lb_28.5.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;16.5— </figcaption>
 </figure>
 </div>
@@ -683,13 +684,13 @@ run_Pop(popcorn);
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_77" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/5_lb_1_Orig_CNMc.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="SLS, MAE error for true and  predicted autocorrelations for \beta_{unseen}= [\, 28.5, 32.5 \, ] and different values of L"><img src="../../3_Figs_Pyth/3_Task/4_SLS/5_lb_1_Orig_CNMc.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/5_lb_1_Orig_CNMc.svg" class="lightbox" title="SLS, MAE error for true and  predicted autocorrelations for \beta_{unseen}= [\, 28.5, 32.5 \, ] and different values of L" data-gallery="quarto-lightbox-gallery-6"><img src="../../3_Figs_Pyth/3_Task/4_SLS/5_lb_1_Orig_CNMc.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;16.6— <em>SLS</em>, MAE error for true and predicted autocorrelations for <span class="math inline">\(\beta_{unseen}= [\, 28.5,\)</span> <span class="math inline">\(32.5 \, ]\)</span> and different values of <span class="math inline">\(L\)</span></figcaption>
 </figure>
 </div>
 <div id="fig-fig_78" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/6_lb_3_all_32.5.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="SLS, \beta_{unseen}=32.5, \, L=7,  and  predicted autocorrelation"><img src="../../3_Figs_Pyth/3_Task/4_SLS/6_lb_3_all_32.5.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/4_SLS/6_lb_3_all_32.5.svg" class="lightbox" title="SLS, \beta_{unseen}=32.5, \, L=7,  and  predicted autocorrelation" data-gallery="quarto-lightbox-gallery-7"><img src="../../3_Figs_Pyth/3_Task/4_SLS/6_lb_3_all_32.5.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;16.7— <em>SLS</em>, <span class="math inline">\(\beta_{unseen}=32.5, \, L=7\)</span>, and predicted autocorrelation</figcaption>
 </figure>
 </div>
@@ -707,13 +708,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_82_Traj_B" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/18_lb_31.75_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Trajectories, B-spline, \beta_{unseen} = 31.75"><img src="../../3_Figs_Pyth/3_Task/5_Models/18_lb_31.75_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/18_lb_31.75_All.svg" class="lightbox" title="Trajectories, B-spline, \beta_{unseen} = 31.75" data-gallery="quarto-lightbox-gallery-8"><img src="../../3_Figs_Pyth/3_Task/5_Models/18_lb_31.75_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">(a) Trajectories, B-spline, <span class="math inline">\(\beta_{unseen} = 31.75\)</span></figcaption>
 </figure>
 </div>
 <div id="fig-fig_83_Traj_B" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/19_lb_51.75_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Trajectories, B-spline, \beta_{unseen} = 51.75"><img src="../../3_Figs_Pyth/3_Task/5_Models/19_lb_51.75_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/19_lb_51.75_All.svg" class="lightbox" title="Trajectories, B-spline, \beta_{unseen} = 51.75" data-gallery="quarto-lightbox-gallery-9"><img src="../../3_Figs_Pyth/3_Task/5_Models/19_lb_51.75_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">(b) Trajectories, B-spline, <span class="math inline">\(\beta_{unseen} = 51.75\)</span></figcaption>
 </figure>
 </div>
@@ -721,13 +722,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_82_Traj_L" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/24_lb_31.75_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Trajectories, linear, \beta_{unseen} = 31.75"><img src="../../3_Figs_Pyth/3_Task/5_Models/24_lb_31.75_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/24_lb_31.75_All.svg" class="lightbox" title="Trajectories, linear, \beta_{unseen} = 31.75" data-gallery="quarto-lightbox-gallery-10"><img src="../../3_Figs_Pyth/3_Task/5_Models/24_lb_31.75_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">(c) Trajectories, linear, <span class="math inline">\(\beta_{unseen} = 31.75\)</span></figcaption>
 </figure>
 </div>
 <div id="fig-fig_83_Traj_L" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/25_lb_51.75_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Trajectories, linear, \beta_{unseen} = 51.75"><img src="../../3_Figs_Pyth/3_Task/5_Models/25_lb_51.75_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/25_lb_51.75_All.svg" class="lightbox" title="Trajectories, linear, \beta_{unseen} = 51.75" data-gallery="quarto-lightbox-gallery-11"><img src="../../3_Figs_Pyth/3_Task/5_Models/25_lb_51.75_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">(d) Trajectories, linear, <span class="math inline">\(\beta_{unseen} = 51.75\)</span></figcaption>
 </figure>
 </div>
@@ -741,13 +742,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_82_Auto_B" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/20_lb_3_all_31.75.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Autocorrelations, B-spline, \beta = 31.75"><img src="../../3_Figs_Pyth/3_Task/5_Models/20_lb_3_all_31.75.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/20_lb_3_all_31.75.svg" class="lightbox" title="Autocorrelations, B-spline, \beta = 31.75" data-gallery="quarto-lightbox-gallery-12"><img src="../../3_Figs_Pyth/3_Task/5_Models/20_lb_3_all_31.75.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">(a) Autocorrelations, B-spline, <span class="math inline">\(\beta = 31.75\)</span></figcaption>
 </figure>
 </div>
 <div id="fig-fig_83_Auto_B" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/21_lb_3_all_51.75.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Autocorrelations, B-spline, \beta_{unseen} = 51.75"><img src="../../3_Figs_Pyth/3_Task/5_Models/21_lb_3_all_51.75.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/21_lb_3_all_51.75.svg" class="lightbox" title="Autocorrelations, B-spline, \beta_{unseen} = 51.75" data-gallery="quarto-lightbox-gallery-13"><img src="../../3_Figs_Pyth/3_Task/5_Models/21_lb_3_all_51.75.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">(b) Autocorrelations, B-spline, <span class="math inline">\(\beta_{unseen} = 51.75\)</span></figcaption>
 </figure>
 </div>
@@ -755,13 +756,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_82_Auto_L" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/26_lb_3_all_31.75.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Autocorrelations, linear, \beta = 31.75"><img src="../../3_Figs_Pyth/3_Task/5_Models/26_lb_3_all_31.75.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/26_lb_3_all_31.75.svg" class="lightbox" title="Autocorrelations, linear, \beta = 31.75" data-gallery="quarto-lightbox-gallery-14"><img src="../../3_Figs_Pyth/3_Task/5_Models/26_lb_3_all_31.75.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">(c) Autocorrelations, linear, <span class="math inline">\(\beta = 31.75\)</span></figcaption>
 </figure>
 </div>
 <div id="fig-fig_83_Auto_L" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/27_lb_3_all_51.75.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Autocorrelations, linear, \beta_{unseen} = 51.75"><img src="../../3_Figs_Pyth/3_Task/5_Models/27_lb_3_all_51.75.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/27_lb_3_all_51.75.svg" class="lightbox" title="Autocorrelations, linear, \beta_{unseen} = 51.75" data-gallery="quarto-lightbox-gallery-15"><img src="../../3_Figs_Pyth/3_Task/5_Models/27_lb_3_all_51.75.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">(d) Autocorrelations, linear, <span class="math inline">\(\beta_{unseen} = 51.75\)</span></figcaption>
 </figure>
 </div>
@@ -774,13 +775,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="fig-fig_82_CPD_B" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/22_lb_31.75.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title=", \beta = 31.75"><img src="../../3_Figs_Pyth/3_Task/5_Models/22_lb_31.75.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/22_lb_31.75.svg" class="lightbox" title=", \beta = 31.75" data-gallery="quarto-lightbox-gallery-16"><img src="../../3_Figs_Pyth/3_Task/5_Models/22_lb_31.75.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;16.10— , <span class="math inline">\(\beta = 31.75\)</span></figcaption>
 </figure>
 </div>
 <div id="fig-fig_83_CPD_B" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/23_lb_51.75.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title=", \beta_{unseen} = 51.75"><img src="../../3_Figs_Pyth/3_Task/5_Models/23_lb_51.75.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/23_lb_51.75.svg" class="lightbox" title=", \beta_{unseen} = 51.75" data-gallery="quarto-lightbox-gallery-17"><img src="../../3_Figs_Pyth/3_Task/5_Models/23_lb_51.75.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;16.11— , <span class="math inline">\(\beta_{unseen} = 51.75\)</span></figcaption>
 </figure>
 </div>
@@ -798,13 +799,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/0_lb_9.000.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Illustrative trajectory \beta = 9"><img src="../../3_Figs_Pyth/3_Task/5_Models/0_lb_9.000.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/0_lb_9.000.svg" class="lightbox" title="Illustrative trajectory \beta = 9" data-gallery="quarto-lightbox-gallery-18"><img src="../../3_Figs_Pyth/3_Task/5_Models/0_lb_9.000.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Illustrative trajectory <span class="math inline">\(\beta = 9\)</span></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/1_lb_8.1_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Trajectories, \beta_{unseen} = 8.1"><img src="../../3_Figs_Pyth/3_Task/5_Models/1_lb_8.1_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/1_lb_8.1_All.svg" class="lightbox" title="Trajectories, \beta_{unseen} = 8.1" data-gallery="quarto-lightbox-gallery-19"><img src="../../3_Figs_Pyth/3_Task/5_Models/1_lb_8.1_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Trajectories, <span class="math inline">\(\beta_{unseen} = 8.1\)</span></figcaption>
 </figure>
 </div>
@@ -812,13 +813,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/2_lb_8.1_3V_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="2D-trajectories, \beta_{unseen} = 8.1"><img src="../../3_Figs_Pyth/3_Task/5_Models/2_lb_8.1_3V_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/2_lb_8.1_3V_All.svg" class="lightbox" title="2D-trajectories, \beta_{unseen} = 8.1" data-gallery="quarto-lightbox-gallery-20"><img src="../../3_Figs_Pyth/3_Task/5_Models/2_lb_8.1_3V_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">2D-trajectories, <span class="math inline">\(\beta_{unseen} = 8.1\)</span></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/3_lb_3_all_8.1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Autocorrelations, \beta_{unseen} = 8.1"><img src="../../3_Figs_Pyth/3_Task/5_Models/3_lb_3_all_8.1.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/3_lb_3_all_8.1.svg" class="lightbox" title="Autocorrelations, \beta_{unseen} = 8.1" data-gallery="quarto-lightbox-gallery-21"><img src="../../3_Figs_Pyth/3_Task/5_Models/3_lb_3_all_8.1.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Autocorrelations, <span class="math inline">\(\beta_{unseen} = 8.1\)</span></figcaption>
 </figure>
 </div>
@@ -826,13 +827,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/4_lb_8.1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title=", \beta_{unseen} = 8.1"><img src="../../3_Figs_Pyth/3_Task/5_Models/4_lb_8.1.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/4_lb_8.1.svg" class="lightbox" title=", \beta_{unseen} = 8.1" data-gallery="quarto-lightbox-gallery-22"><img src="../../3_Figs_Pyth/3_Task/5_Models/4_lb_8.1.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">, <span class="math inline">\(\beta_{unseen} = 8.1\)</span></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/5_lb_1_Orig_CNMc.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Autocorrelations MAE(L,\, \beta_{unseen})"><img src="../../3_Figs_Pyth/3_Task/5_Models/5_lb_1_Orig_CNMc.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/5_lb_1_Orig_CNMc.svg" class="lightbox" title="Autocorrelations MAE(L,\, \beta_{unseen})" data-gallery="quarto-lightbox-gallery-23"><img src="../../3_Figs_Pyth/3_Task/5_Models/5_lb_1_Orig_CNMc.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Autocorrelations <span class="math inline">\(MAE(L,\, \beta_{unseen})\)</span></figcaption>
 </figure>
 </div>
@@ -851,13 +852,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/6_lb_7.500.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Illustrative trajectory \beta = 7.5"><img src="../../3_Figs_Pyth/3_Task/5_Models/6_lb_7.500.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/6_lb_7.500.svg" class="lightbox" title="Illustrative trajectory \beta = 7.5" data-gallery="quarto-lightbox-gallery-24"><img src="../../3_Figs_Pyth/3_Task/5_Models/6_lb_7.500.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Illustrative trajectory <span class="math inline">\(\beta = 7.5\)</span></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/7_lb_9.6_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Trajectories, \beta_{unseen} = 9.6"><img src="../../3_Figs_Pyth/3_Task/5_Models/7_lb_9.6_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/7_lb_9.6_All.svg" class="lightbox" title="Trajectories, \beta_{unseen} = 9.6" data-gallery="quarto-lightbox-gallery-25"><img src="../../3_Figs_Pyth/3_Task/5_Models/7_lb_9.6_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Trajectories, <span class="math inline">\(\beta_{unseen} = 9.6\)</span></figcaption>
 </figure>
 </div>
@@ -865,13 +866,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/8_lb_9.6_3V_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="2D-trajectories, \beta_{unseen} = 9.6"><img src="../../3_Figs_Pyth/3_Task/5_Models/8_lb_9.6_3V_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/8_lb_9.6_3V_All.svg" class="lightbox" title="2D-trajectories, \beta_{unseen} = 9.6" data-gallery="quarto-lightbox-gallery-26"><img src="../../3_Figs_Pyth/3_Task/5_Models/8_lb_9.6_3V_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">2D-trajectories, <span class="math inline">\(\beta_{unseen} = 9.6\)</span></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/9_lb_3_all_9.6.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Autocorrelations, \beta_{unseen} = 9.6"><img src="../../3_Figs_Pyth/3_Task/5_Models/9_lb_3_all_9.6.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/9_lb_3_all_9.6.svg" class="lightbox" title="Autocorrelations, \beta_{unseen} = 9.6" data-gallery="quarto-lightbox-gallery-27"><img src="../../3_Figs_Pyth/3_Task/5_Models/9_lb_3_all_9.6.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Autocorrelations, <span class="math inline">\(\beta_{unseen} = 9.6\)</span></figcaption>
 </figure>
 </div>
@@ -879,13 +880,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/10_lb_9.6.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title=", \beta_{unseen} = 9.6"><img src="../../3_Figs_Pyth/3_Task/5_Models/10_lb_9.6.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/10_lb_9.6.svg" class="lightbox" title=", \beta_{unseen} = 9.6" data-gallery="quarto-lightbox-gallery-28"><img src="../../3_Figs_Pyth/3_Task/5_Models/10_lb_9.6.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">, <span class="math inline">\(\beta_{unseen} = 9.6\)</span></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/11_lb_1_Orig_CNMc.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Autocorrelations MAE(L,\, \beta_{unseen})"><img src="../../3_Figs_Pyth/3_Task/5_Models/11_lb_1_Orig_CNMc.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/11_lb_1_Orig_CNMc.svg" class="lightbox" title="Autocorrelations MAE(L,\, \beta_{unseen})" data-gallery="quarto-lightbox-gallery-29"><img src="../../3_Figs_Pyth/3_Task/5_Models/11_lb_1_Orig_CNMc.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Autocorrelations <span class="math inline">\(MAE(L,\, \beta_{unseen})\)</span></figcaption>
 </figure>
 </div>
@@ -904,13 +905,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/12_lb_11.000.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Illustrative trajectory \beta = 11"><img src="../../3_Figs_Pyth/3_Task/5_Models/12_lb_11.000.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/12_lb_11.000.svg" class="lightbox" title="Illustrative trajectory \beta = 11" data-gallery="quarto-lightbox-gallery-30"><img src="../../3_Figs_Pyth/3_Task/5_Models/12_lb_11.000.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Illustrative trajectory <span class="math inline">\(\beta = 11\)</span></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/13_lb_5.1_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Trajectories, \beta_{unseen} = 5.1"><img src="../../3_Figs_Pyth/3_Task/5_Models/13_lb_5.1_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/13_lb_5.1_All.svg" class="lightbox" title="Trajectories, \beta_{unseen} = 5.1" data-gallery="quarto-lightbox-gallery-31"><img src="../../3_Figs_Pyth/3_Task/5_Models/13_lb_5.1_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Trajectories, <span class="math inline">\(\beta_{unseen} = 5.1\)</span></figcaption>
 </figure>
 </div>
@@ -918,13 +919,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/14_lb_5.1_3V_All.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="2D-trajectories, \beta_{unseen} = 5.1"><img src="../../3_Figs_Pyth/3_Task/5_Models/14_lb_5.1_3V_All.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/14_lb_5.1_3V_All.svg" class="lightbox" title="2D-trajectories, \beta_{unseen} = 5.1" data-gallery="quarto-lightbox-gallery-32"><img src="../../3_Figs_Pyth/3_Task/5_Models/14_lb_5.1_3V_All.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">2D-trajectories, <span class="math inline">\(\beta_{unseen} = 5.1\)</span></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/15_lb_3_all_5.1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="Autocorrelations, \beta_{unseen} = 5.1"><img src="../../3_Figs_Pyth/3_Task/5_Models/15_lb_3_all_5.1.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/15_lb_3_all_5.1.svg" class="lightbox" title="Autocorrelations, \beta_{unseen} = 5.1" data-gallery="quarto-lightbox-gallery-33"><img src="../../3_Figs_Pyth/3_Task/5_Models/15_lb_3_all_5.1.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Autocorrelations, <span class="math inline">\(\beta_{unseen} = 5.1\)</span></figcaption>
 </figure>
 </div>
@@ -932,13 +933,13 @@ Two illustrative examples of the unacceptable high deviations caused by the B-sp
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/16_lb_5.1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title=", \beta_{unseen} = 5.1"><img src="../../3_Figs_Pyth/3_Task/5_Models/16_lb_5.1.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/16_lb_5.1.svg" class="lightbox" title=", \beta_{unseen} = 5.1" data-gallery="quarto-lightbox-gallery-34"><img src="../../3_Figs_Pyth/3_Task/5_Models/16_lb_5.1.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">, <span class="math inline">\(\beta_{unseen} = 5.1\)</span></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="../../3_Figs_Pyth/3_Task/5_Models/17_lb_1_Orig_CNMc.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="Autocorrelations MAE(L,\, \beta_{unseen})"><img src="../../3_Figs_Pyth/3_Task/5_Models/17_lb_1_Orig_CNMc.svg" class="img-fluid figure-img"></a></p>
+<p><a href="../../3_Figs_Pyth/3_Task/5_Models/17_lb_1_Orig_CNMc.svg" class="lightbox" title="Autocorrelations MAE(L,\, \beta_{unseen})" data-gallery="quarto-lightbox-gallery-35"><img src="../../3_Figs_Pyth/3_Task/5_Models/17_lb_1_Orig_CNMc.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Autocorrelations <span class="math inline">\(MAE(L,\, \beta_{unseen})\)</span></figcaption>
 </figure>
 </div>
@@ -1349,7 +1350,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"closeEffect":"zoom","descPosition":"right","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"right","loop":true,"openEffect":"zoom"});</script>
 
 
 

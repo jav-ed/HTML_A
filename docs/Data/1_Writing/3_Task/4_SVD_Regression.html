@@ -489,6 +489,7 @@ aElement.id = 'feedback_A';
 
 // open link in a new tab
 aElement.setAttribute("target","_blank");
+aElement.setAttribute("rel", "noopener noreferrer");
 
 button_Elem.id = 'feedback_Button';
 
@@ -1227,7 +1228,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"right","closeEffect":"zoom","loop":true,"selector":".lightbox","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"right","openEffect":"zoom"});</script>
 
 
 
